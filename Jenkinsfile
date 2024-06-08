@@ -9,7 +9,7 @@ pipeline {
                 script {
                     // Building Docker Image
                     echo "Building Docker image with tag: $DOCKER_IMAGE"
-                    sh "docker build -t $DOCKER_IMAGE ."
+                    bat "docker build -t %DOCKER_IMAGE% ."
                 }
             }
         }
@@ -18,7 +18,7 @@ pipeline {
                 script {
                     // Replace 'echo "Running tests"' with actual test command
                     echo "Executing tests"
-                    sh "docker run --rm $DOCKER_IMAGE npm test"
+                    bat "docker run --rm %DOCKER_IMAGE% npm test"
                 }
             }
         }
@@ -27,7 +27,7 @@ pipeline {
                 script {
                     // Running container on designated port
                     echo "Deploying application on port 80"
-                    sh "docker run -d -p 80:5050 $DOCKER_image"
+                    bat "docker run -d -p 80:5050 %DOCKER_IMAGE%"
                     echo "Deployed successfully"
                 }
             }
@@ -37,7 +37,7 @@ pipeline {
         always {
             // Clean up Docker images to free space
             echo "Cleaning up Docker images"
-            sh "docker rmi $DOCKER_IMAGE"
+            bat "docker rmi %DOCKER_IMAGE%"
         }
     }
 }
