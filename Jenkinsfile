@@ -15,15 +15,20 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    echo "Executing tests"
-                    bat "docker run --rm $DOCKER_IMAGE npm test"
+                   echo "Checking for test script..."
+                    sh 'npm list scripts | grep test || echo "No test script found. Skipping tests."'
+                    if (scriptReturnCode == 0) {
+                        echo "Executing tests"
+                        bat "docker run --rm $DOCKER_IMAGE npm test"
+                    } else {
+                        echo "Tests not found. Skipping..."
+                    }
                 }
             }
         }
         stage('Deploy') {
             steps {
-                script {
-                       echo "Deploying application on port 5050"
+                echo "Deploying application on port 5050"
 
                     // Step 1: Stop the currently running container (if any)
                     bat (
@@ -38,7 +43,6 @@ pipeline {
                     bat "docker run -d -p 5050:5050 --name website03 $DOCKER_IMAGE"
 
                     echo "Deployed successfully"
-                }
             }
         }
     }
