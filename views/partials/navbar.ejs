@@ -1,0 +1,46 @@
+
+<section class="navv" style="color: black; font-family: system-ui">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" ></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Shop
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/clothing">Coats</a></li>
+            <li><a class="dropdown-item" href="/suits">Suits</a></li>
+            <li><a class="dropdown-item" href="/accessories">Accessories</a></li>
+            <li><a class="dropdown-item" href="/shoes">Shoes</a></li>
+          </ul>
+          <% if (!user) { %>
+        <li class="nav-item">
+          <a class="nav-link" href="signin">Sign in </a>
+          <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="logout">logout </a>
+        </li>
+        <%}  %>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/cart">Cart</a>
+        </li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+</section>

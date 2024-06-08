@@ -1,0 +1,43 @@
+<%- include('../partials/header') -%>
+<%- include('../partials/navbar') -%>
+
+
+<link rel="stylesheet" href="style.css">
+<h1 style="position: absolute; left: 800px; margin-top: 0; bottom: 1050px;">Sign in </h1>
+<img src="/images/loggo.png" alt="" width="180" height="190" style=" position:  absolute; left: 1400px;">
+
+      <%- include('../partials/flashMessages') -%>
+      
+      
+<form class="sign" method="post" action="/insert">
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="email">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
+      
+    </div>
+    <label for="exampleInputEmail1" class="phone">Your Name</label>
+    <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Enter Your Name" required name="name" >
+    
+    <label for="exampleInputEmail1" class="phone">Your Phone Number</label>
+    <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Enter Your phone Number" name="phone" >
+    
+    <div class="form-group">
+      <label for="exampleInputPassword1" class="password">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required name="password">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputPassword1" class="password"> Confirm Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder=" Enter Your Password Again" required name="confirm_password">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Do you want get notifications?</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+    <a href="/signin">You Already Have an Existing Account ? </a>
+  </form>
+ 
+
+<%- include('../partials/footer') -%>

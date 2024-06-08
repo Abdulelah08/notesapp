@@ -1,0 +1,59 @@
+<%- include('../partials/header') -%>
+<%- include('../partials/navbar') -%>
+
+<link rel="stylesheet" href="style.css">
+
+<div class="wrapper"> <a class="navbar-brand" href="#" ><h1 id="logo1"  class="brandi"><img src="/images/loggo.png" alt="" width="450" height="500"></h1></a>
+    <header><img src="/images/Mountain.png" class="background"></header>
+
+    <%- include('../partials/flashMessages') -%>
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="/images/COAT.jpeg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Coates</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="/images/watch.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Accessories</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="/images/luxshoes.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Shoes</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="/images/suit.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Suits</p>
+        </div>
+      </div>
+      <script>
+          const cards = document.querySelectorAll('.card');
+          const observer = new IntersectionObserver(entries => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add('appear');
+                  } else {
+                      entry.target.classList.remove('appear');
+                  }
+              });
+          });
+      
+          cards.forEach(card => {
+              observer.observe(card);
+          });
+      </script>
+</div>
+<section class="lolo"><h3>This is a project for CS346
+    Made by: <br> -Abdulelah Almutairi <br>-Abdulaziz Alhaizan <br> -Abdumajeed Alghannam
+<!-- <section class="lore">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium rem d    eleniti voluptas autem tempora placeat delectus blanditiis id? Obcaecati, aliquam sapiente repellendus ipsum cum labore natus veniam quidem molestias, fugit impedit ipsa, neque eligendi iusto minima voluptate inventore. Voluptate natus nemo, qui dolorem vero aspernatur architecto accusantium necessitatibus eos porro nostrum ipsam expedita sed dolore quisquam, alias dolor doloribus rem quibusdam molestias unde voluptas! Quibusdam, a. Quo iusto cum et amet veniam in quod rerum cupiditate, laboriosam necessitatibus, quam omnis neque sed. Illum voluptatibus laborum eius. Tempora voluptas similique non ipsum dolores illum porro, maiores fugiat fugit facere quasi iure nam magni dolor ex repellat ea culpa? Nesciunt ea fuga minus magni id sequi unde sapiente, tempora, deserunt eveniet odit quod magnam expedita iure libero delectus eligendi deleniti? Ea quo, molestiae, eaque saepe aperiam velit eos eius amet doloribus voluptatem voluptatum tempora! Nisi saepe molestias suscipit praesentium accusamus magni quisquam delectus laudantium aliquam ducimus non fugiat officia debitis commodi neque dicta odit distinctio obcaecati aspernatur, dolorem quos facere facilis! Quos aspernatur perspiciatis neque error impedit, culpa labore ex ipsam modi. Laudantium quisquam totam voluptatum laboriosam quae rerum nemo at aperiam illum facilis culpa eveniet debitis facere quam molestias voluptatem ad, dicta necessitatibus voluptatibus. Ipsum velit, fuga culpa omnis, necessitatibus corrupti nisi fugiat facere animi saepe dolorem inventore deleniti repellendus enim dicta accusamus? Error laboriosam, perferendis aut optio dolorum blanditiis tenetur illo ducimus est temporibus? Earum inventore excepturi maiores neque esse in, eveniet, ab expedita et voluptate distinctio ullam minima cum libero quaerat praesentium consectetur modi dignissimos tempore aspernatur rerum nemo saepe magnam nisi. Neque quae cum natus blanditiis dolores ipsum voluptatibus alias eveniet error dignissimos? Cumque sapiente sed numquam esse autem? Porro dolore aliquid temporibus a quo laboriosam incidunt doloremque eligendi. Accusamus totam laudantium deleniti molestias dolore ab facere.</section> -->
+ 
+    
+ </h3></section>
+
+<%- include('../partials/footer') -%>

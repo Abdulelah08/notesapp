@@ -1,0 +1,16 @@
+<%- include('../partials/header') -%>
+<%- include('../partials/navbar') -%>
+
+<link rel="stylesheet" href="style.css">
+<h1 style="position: absolute; left: 700px; margin-top: 0; bottom: 1050px;">Order summary </h1>
+<img src="/images/loggo.png" alt="" width="180" height="190" style=" position:  absolute; left: 1400px;">
+<form class="sign" method="post" action="/order">
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="email">Address</label>
+      <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Enter your address">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Buy </button>
+  </form>
+
+<%- include('../partials/footer') -%>

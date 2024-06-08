@@ -1,0 +1,18 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# System files
+.DS_Store
+
+# Log files
+*.log
+
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Ansible temporary files
+*.retry
